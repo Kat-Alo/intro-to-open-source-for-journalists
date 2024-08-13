@@ -9,8 +9,13 @@ Tesseract is a popular open-source Optical Character Recognition (OCR) engine th
 To install Tesseract on macOS, you’ll need to use Homebrew, a package manager for macOS.
 
 1. **Install Homebrew (if not already installed)**:
-   - Open Terminal.
-   - Run the following command:
+   - You may need to install X-code command line tools first! This package will allow other packages (including Homebrew) to execute commands. Open Terminal and run:
+
+   ```bash
+   xcode-select --install
+   ```
+
+   - Then install Homebrew, which will act as a manager for a lot of other packages you need to install. Run the following command:
 
      ```bash
      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -43,31 +48,6 @@ To install Tesseract on macOS, you’ll need to use Homebrew, a package manager 
 
    - If installed correctly, this command will display the version of Tesseract you have installed.
 
-### Linux
-
-On Linux, you can install Tesseract using your distribution’s package manager.
-
-1. **Install Tesseract**:
-   - For Debian-based systems (like Ubuntu):
-
-     ```bash
-     sudo apt-get install tesseract-ocr
-     ```
-
-   - For Red Hat-based systems (like Fedora):
-
-     ```bash
-     sudo dnf install tesseract
-     ```
-
-2. **Verify Installation**:
-   - Open your terminal and type:
-
-     ```bash
-     tesseract -v
-     ```
-
-   - The command should output the Tesseract version number.
 
 ## Step 2: Downloading Language Data Files
 
