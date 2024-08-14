@@ -17,9 +17,9 @@ To install Tesseract on macOS, you’ll need to use Homebrew, a package manager 
 
    - Then install Homebrew, which will act as a manager for a lot of other packages you need to install. Run the following command:
 
-     ```bash
-     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-     ```
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
 
 2. **Install Tesseract**:
    - Once Homebrew is installed, run the following command in Terminal:
@@ -48,26 +48,13 @@ To install Tesseract on macOS, you’ll need to use Homebrew, a package manager 
 
    - If installed correctly, this command will display the version of Tesseract you have installed.
 
-
-## Step 2: Downloading Language Data Files
-
-Tesseract supports multiple languages, and each language requires a specific data file.
-
-1. **Download Language Files**:
-   - You can download additional language files from the [Tesseract GitHub repository](https://github.com/tesseract-ocr/tessdata).
-
-2. **Place the Files in the Correct Directory**:
-   - On macOS and Linux, place the downloaded `.traineddata` files in the `/usr/local/share/tessdata/` directory.
-   - On Windows, place them in the `Tesseract-OCR/tessdata` directory within the installation folder.
-
-## Step 3: Running Tesseract
+## Step 2: Running Tesseract
 
 Now that Tesseract is installed, you can start using it to extract text from images.
 
 ### Basic Usage
 
-1. **Open the Terminal or Command Prompt**.
-2. **Run Tesseract on an Image**:
+**Run Tesseract on an Image**:
    - To extract text from an image called `image.png`, use:
 
      ```bash
@@ -75,16 +62,6 @@ Now that Tesseract is installed, you can start using it to extract text from ima
      ```
 
    - This command creates a file called `output.txt` with the extracted text.
-
-### Specifying a Language
-
-If you need to specify a language other than English, use the `-l` option:
-
-```bash
-tesseract image.png output -l eng
-```
-
-Replace `eng` with the code for your desired language.
 
 ### Output to PDF
 
@@ -95,48 +72,3 @@ tesseract image.png output pdf
 ```
 
 This command creates a file called `output.pdf`.
-
-## Step 4: Advanced Configuration (Optional)
-
-### Configuring Tesseract
-
-Tesseract has many configuration options that can be adjusted for better OCR results. Some common configurations include:
-
-- **psm (Page Segmentation Mode)**: Controls how Tesseract splits text and images on the page.
-  
-  Example:
-
-  ```bash
-  tesseract image.png output --psm 1
-  ```
-
-- **OEM (OCR Engine Mode)**: Selects the OCR engine to use (e.g., LSTM, Legacy, etc.).
-
-  Example:
-
-  ```bash
-  tesseract image.png output --oem 1
-  ```
-
-### Using Tesseract with Python
-
-If you're familiar with Python, you can integrate Tesseract with Python using the `pytesseract` library, which acts as a wrapper for Tesseract.
-
-1. **Install the Library**:
-
-   ```bash
-   pip install pytesseract
-   ```
-
-2. **Use Tesseract in a Python Script**:
-
-   ```python
-   from PIL import Image
-   import pytesseract
-
-   img = Image.open('image.png')
-   text = pytesseract.image_to_string(img)
-   print(text)
-   ```
-
-This allows you to automate text extraction from images directly in your Python scripts.
