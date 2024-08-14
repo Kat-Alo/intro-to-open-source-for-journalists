@@ -4,6 +4,6 @@ Welcome!
 
 ## Contents
 
-* [Setup](./docs/setup.md)
-* [Session](./docs/session.md)
-* [Resources](./docs/resources.md)
+* [GitHub](./setup/github.md)
+* [Command Line](./setup/command_line.md)
+* [Tesseract](./session/tesseract.md)
