@@ -15,7 +15,7 @@ To install Tesseract on macOS, you’ll need to use Homebrew, a package manager 
    xcode-select --install
    ```
 
-   - Then install Homebrew, which will act as a manager for a lot of other packages you need to install. Run the following command:
+   - Then install [Homebrew](https://brew.sh/), which will act as a manager for a lot of other packages you need to install. Run the following command:
 
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -33,7 +33,7 @@ To install Tesseract on macOS, you’ll need to use Homebrew, a package manager 
 ### Windows
 
 1. **Download the Installer**:
-   - Go to the [Tesseract download page](https://github.com/tesseract-ocr/tesseract/wiki) and download the latest Windows installer.
+   - Go to the [Tesseract download page](https://tesseract-ocr.github.io/tessdoc/Installation.html) and download the latest Windows installer.
 
 2. **Install Tesseract**:
    - Run the installer you downloaded.
