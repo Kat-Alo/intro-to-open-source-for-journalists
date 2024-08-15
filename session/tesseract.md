@@ -33,17 +33,25 @@ To install Tesseract on macOS, you’ll need to use Homebrew, a package manager 
 ### Windows
 
 1. **Download the Installer**:
-   - Go to the [Tesseract download page](https://tesseract-ocr.github.io/tessdoc/Installation.html) and download the latest Windows installer.
+   - Go to the [Tesseract download page](https://tesseract-ocr.github.io/tessdoc/Installation.html) and download the latest Windows installer. Scroll down to the "Windows" section and follow the links to download from "Tesseract at UB Mannheim". Unless you have a very old computer, make sure to download the 64-bit installer.
 
-2. **Install Tesseract**:
-   - Run the installer you downloaded.
-   - During installation, make sure to select the option to add Tesseract to your system’s PATH. This will allow you to run Tesseract from the command line.
+2. **Run the Installer**
 
-3. **Verify Installation**:
+   - Once the installer is downloaded, run the package. Note the setup path that the package is installed to.
+
+3. **Add Tesseract to the system PATH.**
+
+    - Open the start search, type in "env," and choose "Edit the system environment variables"
+    - Click the "Environment Variables..." on the dialog that opens up
+    - Find the row under "System Variables" for "Path." Select "Path" and click "Edit..."
+    - A new dialog will pop up. Click on "New" and paste in the path from the installer. It will look something like `C:\Program Files\Tesseract-OCR`
+    - Click "Ok" to save the changes
+
+4. **Verify Installation**:
    - Open Command Prompt and type:
 
      ```bash
-     tesseract -v
+     tesseract --version
      ```
 
    - If installed correctly, this command will display the version of Tesseract you have installed.
